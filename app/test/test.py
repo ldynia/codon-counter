@@ -1,0 +1,83 @@
+import sys
+import os.path
+import unittest
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir)))
+from src.statistics import Statistic
+
+
+class AppTestCase(unittest.TestCase):
+
+    FILE_PATH = 'data/dna.fsa'
+
+    def test_nucleotides_count(self):
+        data_fle = open(self.FILE_PATH)
+        results = Statistic(data_fle).count_codons()
+
+        self.assertEqual(results['CTT'], 7)
+        self.assertEqual(results['ATG'], 2)
+        self.assertEqual(results['ACA'], 7)
+        self.assertEqual(results['ACG'], 3)
+        self.assertEqual(results['ATC'], 3)
+        self.assertEqual(results['AAC'], 1)
+        self.assertEqual(results['ATA'], 3)
+        self.assertEqual(results['AGG'], 11)
+        self.assertEqual(results['CCT'], 20)
+        self.assertEqual(results['ACT'], 5)
+        self.assertEqual(results['AGC'], 10)
+        self.assertEqual(results['AAG'], 8)
+        self.assertEqual(results['AGA'], 10)
+        self.assertEqual(results['CAT'], 14)
+        self.assertEqual(results['AAT'], 2)
+        self.assertEqual(results['ATT'], 3)
+        self.assertEqual(results['CTG'], 11)
+        self.assertEqual(results['CTA'], 7)
+        self.assertEqual(results['CTC'], 9)
+        self.assertEqual(results['CAC'], 9)
+        self.assertEqual(results['AAA'], 8)
+        self.assertEqual(results['CCG'], 8)
+        self.assertEqual(results['AGT'], 4)
+        self.assertEqual(results['CCA'], 23)
+        self.assertEqual(results['CAA'], 15)
+        self.assertEqual(results['CCC'], 14)
+        self.assertEqual(results['TAT'], 3)
+        self.assertEqual(results['GGT'], 10)
+        self.assertEqual(results['TGT'], 9)
+        self.assertEqual(results['CGA'], 3)
+        self.assertEqual(results['CAG'], 11)
+        self.assertEqual(results['TCT'], 7)
+        self.assertEqual(results['GAT'], 6)
+        self.assertEqual(results['CGG'], 5)
+        self.assertEqual(results['TTT'], 8)
+        self.assertEqual(results['TGC'], 12)
+        self.assertEqual(results['GGG'], 21)
+        self.assertEqual(results['TAG'], 3)
+        self.assertEqual(results['GGA'], 20)
+        self.assertEqual(results['TGG'], 14)
+        self.assertEqual(results['GGC'], 20)
+        self.assertEqual(results['TAC'], 3)
+        self.assertEqual(results['TTC'], 6)
+        self.assertEqual(results['TCG'], 7)
+        self.assertEqual(results['TTA'], 5)
+        self.assertEqual(results['TTG'], 2)
+        self.assertEqual(results['TCC'], 5)
+        self.assertEqual(results['ACC'], 7)
+        self.assertEqual(results['TCA'], 9)
+        self.assertEqual(results['GCA'], 12)
+        self.assertEqual(results['GTA'], 3)
+        self.assertEqual(results['GCC'], 12)
+        self.assertEqual(results['GTC'], 3)
+        self.assertEqual(results['GCG'], 12)
+        self.assertEqual(results['GTG'], 9)
+        self.assertEqual(results['GAG'], 10)
+        self.assertEqual(results['GTT'], 1)
+        self.assertEqual(results['GCT'], 15)
+        self.assertEqual(results['TGA'], 8)
+        self.assertEqual(results['GAC'], 6)
+        self.assertEqual(results['CGT'], 4)
+        self.assertEqual(results['GAA'], 5)
+        self.assertEqual(results['TAA'], 2)
+        self.assertEqual(results['CGC'], 4)
+
+
+if __name__ == '__main__':
+    unittest.main()
