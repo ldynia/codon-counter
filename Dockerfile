@@ -37,8 +37,8 @@ RUN echo "PATH=$PATH" >> /root/.ssh/environment
 RUN pip install -r requirements.txt
 
 # Make script a global program
-RUN ln -s /app/main.py /usr/local/bin/cdncounter
-RUN chmod +x /usr/local/bin/cdncounter
+RUN ln -s /app/main.py /usr/local/bin/cdncount
+RUN chmod +x /usr/local/bin/cdncount
 
 # Startup script
 ENTRYPOINT ["sh", "/docker/startup.sh"]
