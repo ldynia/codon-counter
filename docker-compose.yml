@@ -6,5 +6,5 @@ services:
     image: ldynia/codon:1.0
     build: .
     restart: always
-    container_name: codon_1.0
+    container_name: codon
     command: sh scripts/startup.sh
