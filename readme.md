@@ -33,6 +33,6 @@ OK
 Run program.
 
 ```bash
-user@machine:~/pipeline/codon-counter$ docker exec codon cdncount data/dna.fsa
+user@machine:~/pipeline/codon-counter$ docker exec codon cdncount -f data/dna.fsa
 {"CTT": 7, "ATG": 2, "ACA": 7, "ACG": 3, "ATC": 3, "AAC": 1, "ATA": 3, "AGG": 11, "CCT": 20, "ACT": 5, "AGC": 10, "AAG": 8, "AGA": 10, "CAT": 14, "AAT": 2, "ATT": 3, "CTG": 11, "CTA": 7, "CTC": 9, "CAC": 9, "AAA": 8, "CCG": 8, "AGT": 4, "CCA": 23, "CAA": 15, "CCC": 14, "TAT": 3, "GGT": 10, "TGT": 9, "CGA": 3, "CAG": 11, "TCT": 7, "GAT": 6, "CGG": 5, "TTT": 8, "TGC": 12, "GGG": 21, "TAG": 3, "GGA": 20, "TGG": 14, "GGC": 20, "TAC": 3, "TTC": 6, "TCG": 7, "TTA": 5, "TTG": 2, "TCC": 5, "ACC": 7, "TCA": 9, "GCA": 12, "GTA": 3, "GCC": 12, "GTC": 3, "GCG": 12, "GTG": 9, "GAG": 10, "GTT": 1, "GCT": 15, "TGA": 8, "GAC": 6, "CGT": 4, "GAA": 5, "TAA": 2, "CGC": 4}
 ```
