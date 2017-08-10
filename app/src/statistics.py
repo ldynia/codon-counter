@@ -7,7 +7,7 @@ license: MIT
 
 class Statistic():
     """
-    Example: fsa-analyzer data/dna.fsa | python -m json.tool
+    Example: cdncount -f data/dna.fsa | python -m json.tool
     """
     CODONS = [
         'ATT', 'ATC', 'ATA', 'CTT',
